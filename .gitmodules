@@ -1,0 +1,3 @@
+[submodule "lwf-loader"]
+	path = lwf-loader
+	url = git@github.com:gree/lwf-loader.git
