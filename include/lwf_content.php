@@ -56,6 +56,10 @@ function wpLwfRenderer($lwf) {
                     if(window['settings']['imageMap'] != undefined) {
                         tElements[i].setAttribute("data-lwf-image_map", JSON.stringify(window['settings']['imageMap']));
                     }
+
+                    if(window['settings']['privateData'] != undefined) {
+                        tElements[i].setAttribute("data-lwf-private_data", JSON.stringify(window['settings']['privateData']));
+                    }
                 }
 
                 var tLwfLoader = new window['LwfLoader']();
