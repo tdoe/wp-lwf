@@ -6,8 +6,8 @@
  * Time: 18:06
  *
 Plugin Name: wp-lwf
-Plugin URI:
-Description:
+Plugin URI: https://github.com/tdoe/wp-lwf
+Description: LWF rendering plugin
 Version: 0.0.1
 Author: Tadahiro oe
 Author URI:
