@@ -33,3 +33,19 @@ add_filter('the_content', 'wpLwfSettingParse');
 // lwf content load.
 require_once $include_dir . 'lwf_content.php';
 add_filter('the_content', 'wpLwfParse');
+
+add_action('wp_head', 'addWpLwfHeader');
+
+function addWpLwfHeader()
+{
+
+    $lwf_url = WP_PLUGIN_URL . '/wp-lwf/lwf-loader/js/lwf.js';
+    $lwf_loader_url = WP_PLUGIN_URL . '/wp-lwf/lwf-loader/js/lwf-loader-all.min.js';
+
+    echo <<<EOT
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.2.1/lodash.min.js"></script>
+<script type="text/javascript" src="$lwf_url"></script>
+<script type="text/javascript" src="$lwf_loader_url"></script>
+EOT;
+
+}

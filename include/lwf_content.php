@@ -7,16 +7,10 @@ function wpLwfParse($content)
 
 function wpLwfRenderer($lwf)
 {
-    $lwf_url = WP_PLUGIN_URL . '/wp-lwf/lwf-loader/js/lwf.js';
-    $lwf_loader_url = WP_PLUGIN_URL . '/wp-lwf/lwf-loader/js/lwf-loader-all.min.js';
-
     $id = preg_replace('#http.+/|\.js#', '', $lwf[1]);
 
     $lwf_write
         = <<<EOT
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.2.1/lodash.min.js"></script>
-    <script type="text/javascript" src="$lwf_url"></script>
-    <script type="text/javascript" src="$lwf_loader_url"></script>
     <script type="text/javascript" src="$lwf[1]"></script>
     <script type="text/javascript">
         window.addEventListener('DOMContentLoaded', function () {
